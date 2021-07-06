@@ -1,23 +1,15 @@
-## alacritty
+## COnfiguration file paths
 
 ```bash
+# Alacritty
 $vim ~/.config/alacritty/alacritty.yml
-```
 
-## zshrc
-
-```bash
+# Zsh
 $vim ~/.zshrc
-```
 
-## vimrc
-
-```bash
+# Vim
 $vim ~/.vimrc
-```
 
-## tmux
-
-```bash
+# tmux
 $vim ~/.tmux.conf
 ```
