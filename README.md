@@ -1,4 +1,4 @@
-## COnfiguration file paths
+## Config paths
 
 ```bash
 # Alacritty
