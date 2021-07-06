@@ -35,7 +35,7 @@ set ai                  " Enable autoindent
 " Vim editor font
 " set gfn=Ubuntu\ Mono\ derivative\ Powerline\ 10
 " Gruvbox: https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
-colorscheme hybrid      " Editor theme
+colorscheme gruvbox     " Editor theme
 " BOM often causes trouble, UTF-8 is awesome!
 set encoding=utf-8 nobomb
 
