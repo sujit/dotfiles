@@ -34,6 +34,7 @@ set smartcase           " Automatically switch search to case-sensitive
 set ai                  " Enable autoindent
 " Vim editor font
 " set gfn=Ubuntu\ Mono\ derivative\ Powerline\ 10
+" Gruvbox: https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
 colorscheme hybrid      " Editor theme
 " BOM often causes trouble, UTF-8 is awesome!
 set encoding=utf-8 nobomb
@@ -220,3 +221,13 @@ let &titleold = getcwd()
 " References
 " https://www.shortcutfoo.com/blog/top-50-vim-configuration-options/
 " https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
+" Top themes
+" Gruvbox: https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim
+" One: https://raw.githubusercontent.com/rakr/vim-one/master/colors/one.vim
+" Onehalf Light: https://raw.githubusercontent.com/sonph/onehalf/master/vim/colors/onehalflight.vim
+" Onehalf Dark: https://raw.githubusercontent.com/sonph/onehalf/master/vim/colors/onehalfdark.vim
+" PaperColor: https://raw.githubusercontent.com/NLKNguyen/papercolor-theme/master/colors/PaperColor.vim
+" Ayu: https://raw.githubusercontent.com/ayu-theme/ayu-vim/master/colors/ayu.vim
+" Dracula: https://raw.githubusercontent.com/dracula/vim/e7154372adc95d637ccd911c2f8601d9ff2eac1f/colors/dracula.vim
+" Palenight: https://raw.githubusercontent.com/drewtempelmeyer/palenight.vim/master/colors/palenight.vim
+" Solarized: https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim
