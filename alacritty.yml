@@ -125,7 +125,11 @@ colors:
     white:   '0xadb5c0'
 
 
-# References
+# [References]
+# Config
+#   - https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+#   - https://gist.github.com/Cogitri/e8d5c63818443f3c8f13cd7760fe77aa
+#   - https://git.sr.ht/~rleek/dotfiles/tree/3f52701d57f23a868897fcadcf29d5d5f863098b/alacritty/.config/alacritty/alacritty.yml
 #
 # Themes
 #   - Preview: https://github.com/eendroroy/alacritty-theme
