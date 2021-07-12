@@ -299,3 +299,10 @@ function tree {
      br -c :pt "$@"
 }
 # --END--
+
+
+# [SUJIT] Visual Bell/Beep settings
+# Turn off all beeps
+unsetopt BEEP
+# Turn off autocomplete beeps
+# unsetopt LIST_BEEP
