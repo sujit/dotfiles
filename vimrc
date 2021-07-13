@@ -86,8 +86,8 @@ autocmd BufRead,BufNewFile *.rules syntax on
 
 " Code Folding support
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldenable           " Enable code folding support
-set foldmethod=syntax
+" set foldenable           " Enable code folding support
+" set foldmethod=syntax
 
 
 " Deactivate automatic backup file creation
