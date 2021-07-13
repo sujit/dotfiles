@@ -175,7 +175,6 @@ alias sd='sd -p ${*}'
 alias cp='cp -riv ${*} '
 alias rm='rm -v -i ${*} '
 alias cat='bat --theme 1337 ${*}'
-alias talosdl="wget -c --no-check-certificate https://www.snort.org/rules/snortrules-snapshot-2983.tar.gz?oinkcode=b96fd3d48fa1eb109307e4d40ae03e589f74e0a -O talos.tar.gz"
 alias cvesearch='python ~/tools/cvesearch/cvesearch.py -s ${*}'
 # alias ls='exa -lh --git -s modified '			# Exa
 alias ls='lsd -lt ' 								# LSDeluxe
