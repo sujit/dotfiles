@@ -306,3 +306,7 @@ function tree {
 unsetopt BEEP
 # Turn off autocomplete beeps
 # unsetopt LIST_BEEP
+
+# Enable ls colors
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+
