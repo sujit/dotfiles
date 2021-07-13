@@ -320,11 +320,11 @@ export LSCOLORS="exgxfxdacxDaDaxbadacex"
 # Handle upper and lowercase as one during auto-completion
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 # Show custom warning when there is nothing
-zstyle ':completion:*:warnings'                 format 'Too bad there is nothing'
+zstyle ':completion:*:warnings'         format 'Too bad there is nothing'
 # Separate matches into groups
 zstyle ':completion:*:matches'          group 'yes'
 # Use the tag name as group name
-zstyle ':completion:*'                                  group-name ''
+zstyle ':completion:*'                  group-name ''
 # activate color-completion
 zstyle ':completion:*:default'          list-colors ${(s.:.)LS_COLORS}
 # format on completion
@@ -335,9 +335,9 @@ zstyle ':completion:*:history-words'    menu yes
 zstyle ':completion:*:history-words'    remove-all-dups yes
 zstyle ':completion:*:history-words'    stop yes
 # Activate menu selection
-zstyle ':completion:*'                                  menu select
+zstyle ':completion:*'                  menu select
 # Provide verbose completion information
-zstyle ':completion:*'                                  verbose true
+zstyle ':completion:*'                  verbose true
 # Describe options in full
-zstyle ':completion:*:options'                  description 'yes'
+zstyle ':completion:*:options'          description 'yes'
 # --END--
