@@ -76,7 +76,7 @@ DISABLE_MAGIC_FUNCTIONS="true"  # Helps to paste clipboard faster!
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -313,3 +313,31 @@ unsetopt BEEP
 export LS_COLORS="di=34;40:ln=36;40:so=35;40:pi=33;40:ex=32;40:bd=1;33;40:cd=1;33;40:su=0;41:sg=0;43:tw=0;42:ow=34;40:"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 export LSCOLORS="exgxfxdacxDaDaxbadacex"
+
+# [SUJIT]
+# zstyle customizations
+# --BEGIN--
+# Handle upper and lowercase as one during auto-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+# Show custom warning when there is nothing
+zstyle ':completion:*:warnings'                 format 'Too bad there is nothing'
+# Separate matches into groups
+zstyle ':completion:*:matches'          group 'yes'
+# Use the tag name as group name
+zstyle ':completion:*'                                  group-name ''
+# activate color-completion
+zstyle ':completion:*:default'          list-colors ${(s.:.)LS_COLORS}
+# format on completion
+zstyle ':completion:*:descriptions'     format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
+# activate menu
+zstyle ':completion:*:history-words'    menu yes
+# ignore duplicate entries
+zstyle ':completion:*:history-words'    remove-all-dups yes
+zstyle ':completion:*:history-words'    stop yes
+# Activate menu selection
+zstyle ':completion:*'                                  menu select
+# Provide verbose completion information
+zstyle ':completion:*'                                  verbose true
+# Describe options in full
+zstyle ':completion:*:options'                  description 'yes'
+# --END--
