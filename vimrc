@@ -72,6 +72,11 @@ set vb t_vb=             " Deactive visual bell beep sound
 set noerrorbells         " Disable beep on errors
 
 
+" Remove all trailing whitespace by pressing F5
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+
 " Syntax Highlighting support + snort rules syntax identification
 " Snort Vim Syntax: https://github.com/sploit/snort-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
