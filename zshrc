@@ -19,6 +19,10 @@ source=virtualenvwrapper.sh
 # Only enable if the above doesn't work
 # export TERM=xterm-256color
 
+# [SUJIT] Add ~/.local/bin to $PATH variable
+export PATH=.:${HOME}/local/bin:${PATH}
+
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/sujit/.oh-my-zsh"
 
@@ -164,6 +168,7 @@ prompt_context() {}
 #}
 
 # My custom aliases
+alias fd='fd -H ${*} '
 alias tshark='tshark --color ${*} '
 alias grep='ggrep ${*} --color=auto'
 alias zipdump='python /usr/local/bin/zipdump.py ${*}'
