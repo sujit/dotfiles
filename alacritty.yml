@@ -16,6 +16,9 @@ window:
   # Startup Mode (changes require restart)
   # startup_mode: Fullscreen
   startup_mode: Windowed
+  
+  # Window title
+  title: Alacritty
 
 scrolling:
   history: 50000
