@@ -8,7 +8,6 @@
     "editor.cursorBlinking": "smooth",
     "editor.cursorStyle": "block",
     "editor.detectIndentation": true,
-    // "editor.find.autoFindInSelection": "always",
     "editor.fontFamily": "Sarasa NF,Operator Mono Lig,MonoLisaMedium NF,Sarasa NF,JuliaMono,JetBrainsMono NF,Operator Mono Lig,FiraCode NF,Operator Mono,'Courier New',monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
