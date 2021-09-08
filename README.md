@@ -10,6 +10,9 @@ $vim ~/.zshrc
 # Vim
 $vim ~/.vimrc
 
+# NeoVim
+$vim ~/.config/nvim/init.vim
+
 # tmux
 $vim ~/.tmux.conf
 ```
