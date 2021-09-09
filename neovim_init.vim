@@ -1,5 +1,5 @@
 set nocompatible            " disable compatibility to old-time vi
-set autoread                " Load settings automatically
+set autoread
 set showmatch               " show matching
 set ignorecase              " case insensitive
 set mouse=v                 " middle-click paste with
@@ -18,9 +18,19 @@ set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
-syntax enable
 " set spell                 " enable spell check (may need to download language package)
+
+" NeoVim color support
+if has("termguicolors")
+    set termguicolors
+endif
+
+syntax enable
 set t_Co=256
+set t_ut=
+set background=dark
+" colorscheme gruvbox
+colorscheme one
 
 "*****************************************************************************
 "" Basic Setup
@@ -94,6 +104,41 @@ else
 
 endif
 
+" Init deoplete during startup
+let g:deoplete#enable_at_startup = 1
+
+" Split Terminal settings
+let g:split_term_default_shell = "zsh"
+highlight TermCursor ctermfg=red guifg=red
+set splitright  " Put the new window right of the current one
+set splitbelow
+
+"" Terminal settings
+tnoremap <Leader><ESC> <C-\><C-n>
+
+"" Window navigation function
+"" Make ctrl-h/j/k/l move between windows and auto-insert in terminals
+func! s:mapMoveToWindowInDirection(direction)
+    func! s:maybeInsertMode(direction)
+        stopinsert
+        execute "wincmd" a:direction
+
+        if &buftype == 'terminal'
+            startinsert!
+        endif
+    endfunc
+
+    execute "tnoremap" "<silent>" "<C-" . a:direction . ">"
+                \ "<C-\\><C-n>"
+                \ ":call <SID>maybeInsertMode(\"" . a:direction . "\")<CR>"
+    execute "nnoremap" "<silent>" "<C-" . a:direction . ">"
+                \ ":call <SID>maybeInsertMode(\"" . a:direction . "\")<CR>"
+endfunc
+for dir in ["h", "j", "l", "k"]
+    call s:mapMoveToWindowInDirection(dir)
+endfor
+
+
 
 " Install plugins
 call plug#begin(stdpath('config') . '/plugged')
@@ -104,7 +149,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 
+"" Deoplete (auto-completions)
+Plug 'zchee/deoplete-jedi'
+
 "" Python Bundle
 Plug 'davidhalter/jedi-vim'
+
+"" Terminal split support
+Plug 'vimlab/split-term.vim'
 
 call plug#end()
