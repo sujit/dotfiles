@@ -19,6 +19,7 @@ filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
+set relativenumber
 
 " NeoVim color support
 if has("termguicolors")
@@ -77,11 +78,11 @@ set titlestring=%F
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
 if exists("*fugitive#statusline")
-  set statusline+=%{fugitive#statusline()}
+ set statusline+=%{fugitive#statusline()}
 endif
 
 " Plugin: vim-airline
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'dracula'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -138,6 +139,37 @@ for dir in ["h", "j", "l", "k"]
     call s:mapMoveToWindowInDirection(dir)
 endfor
 
+" Nerdtree tweaks
+
+"" Keybindings
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+"" Start NERDTree and leave the cursor in it.
+" autocmd VimEnter * NERDTree
+
+"" Open the nerdtree window when opening up Nvim, but put
+"" the cursor in the file-editing window
+augroup nerdtree_open
+    autocmd!
+    autocmd VimEnter * NERDTree | wincmd p
+augroup END
+
+"" The ignore patterns are regular expression strings and seprated by comma
+let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
+
+"" Start NERDTree when Vim starts with a directory argument.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+
+"" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+"" Show current root as relative path from $HOME in status bar
+let NERDTreeStatusline="%{exists('b:NERDTree')?fnamemodify(b:NERDTree.root.path.str(), ':~'):''}"
 
 
 " Install plugins
@@ -157,5 +189,17 @@ Plug 'davidhalter/jedi-vim'
 
 "" Terminal split support
 Plug 'vimlab/split-term.vim'
+
+"" Nerdtree
+Plug 'scrooloose/nerdtree'
+
+"" Even more prettier statusline
+"" Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+
+"" Display dev icons
+Plug 'ryanoasis/vim-devicons' " vimscript
+
+"" Another alternative powerline package
+"" Plug 'rbong/vim-crystalline'
 
 call plug#end()
