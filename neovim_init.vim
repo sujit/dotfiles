@@ -213,5 +213,12 @@ Plug 'machakann/vim-highlightedyank'
 " Shortcut key: < "\" (leader key - backslash) + cc>
 Plug 'scrooloose/nerdcommenter'
 
+" Code formatter (e.g. yapf)
+" Also install yapf via pip3
+" pip3 install yapf
+Plug 'sbdchd/neoformat'
+
+" Auto bracket pair
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
