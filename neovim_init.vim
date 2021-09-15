@@ -209,4 +209,9 @@ Plug 'ryanoasis/vim-devicons' " vimscript
 "" Hightlight Yank
 Plug 'machakann/vim-highlightedyank'
 
+"" Nerd commenter (Code Commenter)
+" Shortcut key: < "\" (leader key - backslash) + cc>
+Plug 'scrooloose/nerdcommenter'
+
+
 call plug#end()
