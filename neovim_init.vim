@@ -171,6 +171,10 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 "" Show current root as relative path from $HOME in status bar
 let NERDTreeStatusline="%{exists('b:NERDTree')?fnamemodify(b:NERDTree.root.path.str(), ':~'):''}"
 
+" Plugin (Hightlight Yank)
+hi HighlightedyankRegion cterm=reverse gui=reverse
+"" set highlight duration time to 1000 ms, i.e., 1 second
+let g:highlightedyank_highlight_duration = 1000
 
 " Install plugins
 call plug#begin(stdpath('config') . '/plugged')
@@ -201,5 +205,8 @@ Plug 'ryanoasis/vim-devicons' " vimscript
 
 "" Another alternative powerline package
 "" Plug 'rbong/vim-crystalline'
+
+"" Hightlight Yank
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
