@@ -9,6 +9,9 @@ env:
 #  - { key: Right, mods: Alt, chars: "\x1BF" }
 #  - { key: Left,  mods: Alt, chars: "\x1BB" } 
 
+# Alacritty start-up directory
+working_directory: "C:\\users\\thesu\\"
+
 visual_bell:
     # animation: EaseOutExpo
     # Turn off visual bell
