@@ -11,11 +11,12 @@
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorStyle": "block",
     "editor.detectIndentation": true,
-    "editor.fontFamily": "Sarasa NF,Operator Mono Lig,MonoLisaMedium NF,Sarasa NF,JuliaMono,JetBrainsMono NF,Operator Mono Lig,FiraCode NF,Operator Mono,'Courier New',monospace",
+    "editor.fontFamily": "Iosevka,Operator Mono Lig,Sarasa NF,MonoLisaMedium NF,Sarasa NF,JuliaMono,JetBrainsMono NF,Operator Mono Lig,FiraCode NF,Operator Mono,'Courier New',monospace",
     "editor.fontLigatures": false,
-    "editor.fontSize": 14,
     "editor.fontWeight": "500",
     "editor.formatOnPaste": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.guides.indentation": true,
     "editor.insertSpaces": true,
     "editor.largeFileOptimizations": false,
     "editor.lineHeight": 0,
@@ -64,6 +65,7 @@
         "compounds": [],
         "configurations": []
     },
+    "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Operator Mono Lig', 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
@@ -75,14 +77,13 @@
     "python.pythonPath": "C:\\tmp\\venv\\Scripts\\python.exe",
     "python.terminal.activateEnvironment": false,
     "python.venvPath": "~/Scripts/python.exe",
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "terminal.integrated.fontFamily": "Operator Mono Lig",
     "terminal.integrated.fontSize": 13,
     "vscode-json-editor.theme": "dark",
     "window.title": "${rootPath}${separator}${appName}",
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "activityBar.activeBorder": "#388E3C",
         "activityBarBadge.background": "#388E3C",
@@ -116,5 +117,6 @@
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "right",
     "workbench.startupEditor": "newUntitledFile"
 }
