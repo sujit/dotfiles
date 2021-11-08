@@ -19,6 +19,7 @@
     "editor.guides.indentation": true,
     "editor.insertSpaces": true,
     "editor.largeFileOptimizations": false,
+    "editor.guides.bracketPairs": true,
     "editor.lineHeight": 0,
     "editor.maxTokenizationLineLength": 200000,
     "editor.minimap.enabled": false,
