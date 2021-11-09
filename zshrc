@@ -286,6 +286,21 @@ export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'nod
 # Add global alias  "| fzf" automagically as a suffix
 alias -g Z='| fzf'
 
+# rga (ripgrep-all) with fzf functionality
+rga_fzf() {
+	RG_PREFIX="rga --files-with-matches"
+	local file
+	file="$(
+		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+				--phony -q "$1" \
+				--bind "change:reload:$RG_PREFIX {q}" \
+				--preview-window="70%:wrap"
+	)" &&
+	echo "opening $file" &&
+	xdg-open "$file"
+}
+
 # find-in-files (fif <search_string>)
 fif() {
     if [ ! "$#" -gt 0 ]; then
