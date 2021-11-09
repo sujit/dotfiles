@@ -115,7 +115,9 @@ plugins=(
 	zsh-interactive-cd
 	git-auto-fetch
 	zsh-autosuggestions
-	zsh-syntax-highlighting
+	# https://github.com/zdharma-continuum/fast-syntax-highlighting
+	fast-syntax-highlighting
+	# zsh-syntax-highlighting
 	history-substring-search
 	virtualenv
 	encode64
