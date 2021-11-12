@@ -77,6 +77,9 @@ set titlestring=%F
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
+" Remove all trailing whitespace by pressing <F5>
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 if exists("*fugitive#statusline")
  set statusline+=%{fugitive#statusline()}
 endif
