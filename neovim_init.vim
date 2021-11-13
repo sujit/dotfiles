@@ -95,12 +95,24 @@ if exists("*fugitive#statusline")
 endif
 
 " Plugin: vim-airline
-let g:airline_theme = 'dracula'
+" let g:airline_theme = 'dracula'
+" Onedark theme looks better than dracula
+let g:airline_theme = 'onedark'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
+" Powerline fonts for airline
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
+
 
 if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
