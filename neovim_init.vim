@@ -224,4 +224,8 @@ Plug 'sbdchd/neoformat'
 " Auto bracket pair
 Plug 'jiangmiao/auto-pairs'
 
+" Telescope (fast code search)
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
