@@ -5,6 +5,7 @@ set nocompatible
 set backspace=indent,eol,start
 set incsearch           " Find as you type, extremely useful
 set ff=unix             " Handle files as Linux based line endings
+set syntax=perl         " Force Syntax coloring for a file that has no extension .pl
 set bg=dark             " Dark background
 set expandtab           " Handle tabs correctly. [Use :retab to remap all tabs to space at once]
 set ts=4 sts=4 sw=4     " Consider tabs with 4 spaces
