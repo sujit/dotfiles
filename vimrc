@@ -1,7 +1,12 @@
 " Basic configs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
-" Allow backspacing over indention, line breaks and insertion start
+set nocompatible        " Allow backspacing over indention, line breaks
+                        " and insertion start
+set exrc		            " Enable reading .vimrc/.exrc/.gvimrc in cwd
+set paste
+set debug=msg           " see error messages for 'foldexpr' & 'indentexpr'
+set laststatus=2	      " Always a status line
+set ttyfast		          " Terminal connection is fast
 set backspace=indent,eol,start
 set incsearch           " Find as you type, extremely useful
 set ff=unix             " Handle files as Linux based line endings
@@ -25,6 +30,10 @@ set synmaxcol=300       " Faster when opening files with large lines (def: 3000)
 " and relative numbers on all other lines
 " set relativenumber
 set winminheight=0      " Windows can be 0 line high
+
+if exists('&cryptmethod')	" new v7.3 encryption
+    set cryptmethod=blowfish
+endif
 
 " Better unix/windows compatibility
 set viewoptions=folds,options,cursor,unix,slash
@@ -65,6 +74,18 @@ set showmatch            " Show matching brackets/parenthesis
 set laststatus=2         " Always display the status bar
 set ruler                " Show line numbers
 set cmdheight=2          " Have some space for the command box
+
+
+""" Messages And Info
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set confirm		" Always use ':confirm'
+set shortmess=aOItT	" To avoid the 'Hit ENTER to continue' prompt
+set showcmd		" Show current uncompleted command
+set showmode		" (no)show the current mode
+set report=0		" Report when N lines were changed.  report=0 : show all changes
+set noruler		" (no)Show the cursor position all the time
+set noerrorbells	" no Ring the bell (beep or screen flash) for error messages.
+set novisualbell	" (don't) Use visual flashing instead of beeping.
 
 
 " Visual bell related
