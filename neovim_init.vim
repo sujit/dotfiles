@@ -27,6 +27,12 @@ set syntax=perl             " Force Syntax coloring for a file that has no exten
 " set spell                 " enable spell check (may need to download language package)
 set relativenumber
 
+" Tabs <Ctrl + Left/Right> <Alt + Left/Right>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :tabm -1<CR>
+nnoremap <silent> <A-Right> :tabm +1<CR>
+
 if exists('&cryptmethod')	" new v7.3 encryption
     set cryptmethod=blowfish
 endif
