@@ -4,6 +4,7 @@ set nocompatible
 " Allow backspacing over indention, line breaks and insertion start
 set backspace=indent,eol,start
 set incsearch           " Find as you type, extremely useful
+set ff=unix             " Handle files as Linux based line endings
 set bg=dark             " Dark background
 set expandtab           " Handle tabs correctly. [Use :retab to remap all tabs to space at once]
 set ts=4 sts=4 sw=4     " Consider tabs with 4 spaces
