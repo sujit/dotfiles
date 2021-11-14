@@ -32,6 +32,12 @@ set synmaxcol=300       " Faster when opening files with large lines (def: 3000)
 " set relativenumber
 set winminheight=0      " Windows can be 0 line high
 
+" Tabs <Ctrl + Left/Right> <Alt + Left/Right>
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :tabm -1<CR>
+nnoremap <silent> <A-Right> :tabm +1<CR>
+
 if exists('&cryptmethod')	" new v7.3 encryption
     set cryptmethod=blowfish
 endif
