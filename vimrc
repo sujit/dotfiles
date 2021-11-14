@@ -3,6 +3,7 @@
 set nocompatible        " Allow backspacing over indention, line breaks
                         " and insertion start
 set exrc		            " Enable reading .vimrc/.exrc/.gvimrc in cwd
+set shellslash		      " Use forward slashes in file names; for Unix-like shells
 set paste
 set debug=msg           " see error messages for 'foldexpr' & 'indentexpr'
 set laststatus=2	      " Always a status line
