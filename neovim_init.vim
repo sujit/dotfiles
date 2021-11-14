@@ -18,6 +18,7 @@ set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
+set syntax=perl             " Force Syntax coloring for a file that has no extension .pl
 " set spell                 " enable spell check (may need to download language package)
 set relativenumber
 
@@ -68,7 +69,8 @@ set expandtab
 set hlsearch
 set incsearch
 set ignorecase
-set smartcase
+set smartcase       " Automatically switch search to case-sensitive
+                    " when search query contains an uppercase letter
 
 "" Directories for swp files
 set nobackup
