@@ -38,6 +38,13 @@ nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabm -1<CR>
 nnoremap <silent> <A-Right> :tabm +1<CR>
 
+" Better tab experience - from https://webdevetc.com/
+map <leader>tn :tabnew<cr>
+map <leader>t<leader> :tabnext
+map <leader>tm :tabmove
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+
 if exists('&cryptmethod')	" new v7.3 encryption
     set cryptmethod=blowfish
 endif
