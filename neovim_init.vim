@@ -1,6 +1,10 @@
 set nocompatible            " disable compatibility to old-time vi
+set exrc		            " Enable reading .vimrc/.exrc/.gvimrc in cwd
+set paste
+set debug=msg               " see error messages for 'foldexpr' & 'indentexpr'
+set ttyfast		            " Terminal connection is fast
 set autoread
-set showmatch               " show matching
+set showmatch               " show matching brackets/parenthesis
 set ignorecase              " case insensitive
 set mouse=v                 " middle-click paste with
 set hlsearch                " highlight search
@@ -21,6 +25,10 @@ set ttyfast                 " Speed up scrolling in Vim
 set syntax=perl             " Force Syntax coloring for a file that has no extension .pl
 " set spell                 " enable spell check (may need to download language package)
 set relativenumber
+
+if exists('&cryptmethod')	" new v7.3 encryption
+    set cryptmethod=blowfish
+endif
 
 " NeoVim color support
 if has("termguicolors")
@@ -44,6 +52,20 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 
+
+""" Messages And Info
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set confirm		" Always use ':confirm'
+set shortmess=aOItT	" To avoid the 'Hit ENTER to continue' prompt
+set showcmd		" Show current uncompleted command
+set showmode		" (no)show the current mode
+set report=0		" Report when N lines were changed.  report=0 : show all changes
+set noruler		" (no)Show the cursor position all the time
+set noerrorbells	" no Ring the bell (beep or screen flash) for error messages.
+set novisualbell	" (don't) Use visual flashing instead of beeping.
+
+
+
 "*****************************************************************************
 "" Basic Setup
 "*****************************************************************************"
@@ -53,7 +75,7 @@ set fileencoding=utf-8
 set fileencodings=utf-8
 set bomb
 " set binary
-set laststatus=2
+set laststatus=2           " Always a status line
 
 
 "" Fix backspace indent
