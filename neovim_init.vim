@@ -1,6 +1,7 @@
 set nocompatible            " disable compatibility to old-time vi
 set exrc		            " Enable reading .vimrc/.exrc/.gvimrc in cwd
 set paste
+set shellslash		        " Use forward slashes in file names; for Unix-like shells
 set debug=msg               " see error messages for 'foldexpr' & 'indentexpr'
 set ttyfast		            " Terminal connection is fast
 set autoread
