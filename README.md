@@ -1,18 +1,21 @@
 ## Config paths
 
-```bash
+```sh
 # Alacritty
-$vim ~/.config/alacritty/alacritty.yml
+vim ~/.config/alacritty/alacritty.yml
 
 # Zsh
-$vim ~/.zshrc
+vim ~/.zshrc
 
 # Vim
-$vim ~/.vimrc
+vim ~/.vimrc
 
 # NeoVim
-$vim ~/.config/nvim/init.vim
+vim ~/.config/nvim/init.vim
 
 # tmux
-$vim ~/.tmux.conf
+vim ~/.tmux.conf
+
+# kitty
+vim ~/.config/kitty/kitty.conf
 ```
