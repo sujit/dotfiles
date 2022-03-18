@@ -115,18 +115,16 @@ plugins=(
 	zsh-interactive-cd
 	git-auto-fetch
 	zsh-autosuggestions
-	# https://github.com/zdharma-continuum/fast-syntax-highlighting
 	fast-syntax-highlighting
-	# zsh-syntax-highlighting
 	history-substring-search
 	virtualenv
 	encode64
 	colored-man-pages
 	copyfile
-	copydir
+	copypath
 	docker
 	docker-compose
-	zsh-pandoc-completion
+	# zsh-pandoc-completion
 	extract
 #	pipenv
 )
