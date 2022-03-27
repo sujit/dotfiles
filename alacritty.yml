@@ -41,17 +41,21 @@ font:
   normal:
     # Font name
     family: FiraCode Nerd Font
+    # family: "Recursive Code iCursive Cg"
     # Font face
     style: Retina
 
   # Bold font face
   bold:
     family: FiraCode Nerd Font
+    # family: "Recursive Code iCursive Cg"
     style: Bold
 
   # Italic font face
   italic:
-    family: Monoid
+    # family: Monoid
+    family: FiraCode Nerd Font
+    # family: "Recursive Code iCursive Cg"
     style: Italic
 
   # Bold italic font face
@@ -59,11 +63,13 @@ font:
   # italic & it just works. You may specifiy the bold italic version if it exists
   # for your font
   bold_italic:
-    family: Monoid
+    # family: Monoid
+    family: FiraCode Nerd Font
+    # family: "Recursive Code iCursive Cg"
     style: Italic
 
   # Font size
-  size: 12.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing
