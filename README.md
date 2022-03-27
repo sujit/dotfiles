@@ -33,5 +33,6 @@ vim ~/.config/nvim/init.vim
 vim ~/.tmux.conf
 
 # kitty
+cp theme-rigel.conf theme-gruvbox.conf ~/.config/kitty/ 
 vim ~/.config/kitty/kitty.conf
 ```
