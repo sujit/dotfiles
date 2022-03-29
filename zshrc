@@ -109,6 +109,8 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+        # https://github.com/Aloxaf/fzf-tab
+	fzf-tab
 	gitfast
 	last-working-dir
 	zsh-completions
