@@ -40,6 +40,8 @@ export ZSH="/Users/sujit/.oh-my-zsh"
 
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# Do not print the trailing % symbol in STDOUT
+PROMPT_EOL_MARK=''
 POWERLEVEL9K_MODE="nerdfont-complete"
 # POWERLEVEL9K_COLOR_SCHEME='light'
 # POWERLEVEL9K_TIME_FOREGROUND="249"
