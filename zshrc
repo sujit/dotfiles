@@ -114,6 +114,7 @@ plugins=(
         # https://github.com/Aloxaf/fzf-tab
 	fzf-tab
 	gitfast
+	sudo # Auto-prefix sudo <DoubleEsc>
 	last-working-dir
 	zsh-completions
 	zsh-interactive-cd
