@@ -130,6 +130,7 @@ plugins=(
 	docker-compose
 	# zsh-pandoc-completion
 	extract
+	zsh-z
 #	pipenv
 )
 
