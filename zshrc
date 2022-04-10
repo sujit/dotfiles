@@ -366,3 +366,9 @@ zstyle ':completion:*'                  verbose true
 # Describe options in full
 zstyle ':completion:*:options'          description 'yes'
 # --END--
+
+## [SUJIT] mcfly config
+eval "$(mcfly init zsh)"
+export MCFLY_FUZZY=2
+export MCFLY_RESULTS=30
+export MCFLY_RESULTS_SORT=LAST_RUN
