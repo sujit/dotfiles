@@ -320,9 +320,13 @@ fif() {
 # --END--
 
 # [SUJIT]
-# A quick trick to prettify CSVs
+# A quick trick to prettify CSV/TSV
 function pretty_csv {
     cat "$@" | sed 's/,/ ,/g' | column -t -s, | less -S
+}
+
+function pretty_tsv () {
+    column -t -s $'\t' -n "$@" | less -F -S -X -K
 }
 
 
