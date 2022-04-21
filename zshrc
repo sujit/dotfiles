@@ -315,6 +315,12 @@ fif() {
 }
 # --END--
 
+# [SUJIT]
+# A quick trick to prettify CSVs
+function pretty_csv {
+    cat "$@" | sed 's/,/ ,/g' | column -t -s, | less -S
+}
+
 
 # [SUJIT] broot (br) settings
 # --------------------------------------
