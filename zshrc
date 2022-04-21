@@ -220,6 +220,10 @@ function mkc () {
     mkdir -v -p "$@" && cd "$@"
 }
 
+# Decode Base64 contents
+function decode() {
+   echo "$1" | base64 -d ; echo 
+}
 
 # [Sujit] Construct zsh completions
 # --------------------------------------
