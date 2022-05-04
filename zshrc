@@ -18,7 +18,7 @@ source=virtualenvwrapper.sh
 # Enable 256-bit color support
 # Fix tmux zsh auto-suggest plugin color issues
 # Only enable if the above doesn't work
-export TERM=xterm-256color
+if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
 
 # [SUJIT] Add ~/.local/bin to $PATH variable
 export PATH=.:${HOME}/local/bin:${PATH}
