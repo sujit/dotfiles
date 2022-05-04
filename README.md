@@ -42,3 +42,7 @@ vim ~/.tmux.conf
 cp theme-rigel.conf theme-gruvbox.conf ~/.config/kitty/ 
 vim ~/.config/kitty/kitty.conf
 ```
+
+## References
+
+* [ZSH Color codes](https://github.com/Powerlevel9k/powerlevel9k/wiki/Stylizing-Your-Prompt)
