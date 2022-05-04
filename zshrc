@@ -15,9 +15,10 @@ source=virtualenvwrapper.sh
 # Change TERM to screen only if terminal type is tmux
 # if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
 
+# Enable 256-bit color support
 # Fix tmux zsh auto-suggest plugin color issues
 # Only enable if the above doesn't work
-# export TERM=xterm-256color
+export TERM=xterm-256color
 
 # [SUJIT] Add ~/.local/bin to $PATH variable
 export PATH=.:${HOME}/local/bin:${PATH}
