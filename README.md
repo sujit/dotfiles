@@ -17,7 +17,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 autoload -U zmv # Mass rename files
 # Add below line to ~/.zshrc
-source ~/p10k-tony-lambiris.zsh"
+echo "source ~/p10k-tony-lambiris.zsh" >> ~/.zshrc
 ```
 
 ## Config paths
