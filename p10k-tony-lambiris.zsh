@@ -17,7 +17,7 @@ typeset POWERLEVEL9K_MULTILINE_{FIRST,NEWLINE}_PROMPT_PREFIX=
 typeset POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{172}➜ '
 
 typeset POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon host dir dir_writable vcs)
-typeset POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time time)
+typeset POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv background_jobs command_execution_time time)
 
 typeset POWERLEVEL9K_OS_ICON_FOREGROUND=000
 
