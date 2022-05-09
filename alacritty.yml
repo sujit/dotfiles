@@ -550,10 +550,10 @@ GitHubLight: &GitHubLight
 
 ### GitHub Dark ###
 GitHubDark: &GitHubDark
-    # Default colors
-    primary:
-      background: '0x24292e'
-      foreground: '0xd1d5da'
+  # Default colors
+  primary:
+    background: '0x24292e'
+    foreground: '0xd1d5da'
 
   # Normal colors
   normal:
