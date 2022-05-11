@@ -214,6 +214,16 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
 #export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 
+# Compress PDF (via ghostscript)
+# Install the gs app
+#   brew install ghostscript
+# Arguments to note:
+#   $1 -> Output PDF
+#   $2 -> Input PDF
+compresspdf(){
+   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$1 $2
+}
+
 # Create directory and instantly cd to it
 function mkc () {
     mkdir -v -p "$@" && cd "$@"
