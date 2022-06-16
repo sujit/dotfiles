@@ -3,7 +3,7 @@
 
 ```bash
 sudo apt update
-sudo apt install build-essential autoconf git -y
+sudo apt install build-essential autoconf git clang libclang-dev g++ -y
 sudo apt install zsh -y
 sudo updatedb
 sudo ldconfig
