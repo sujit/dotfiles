@@ -1,6 +1,11 @@
 # Load environment variables from ".env"
 set dotenv-load
 
+# os_mac := if os() == "macos" { "macos" } else { "null" }
+# os_lin := if os() == "linux" { "linux" } else { "null" }
+# os_win := if os() == "windows" { "windows" } else { "null" }
+myos := if os() == "macos" { "macos" } else if os() == "linux" { "linux" } else if os() == "windows" { "windows" } else { "null" }
+
 
 default:
     @just --list
@@ -17,7 +22,7 @@ reqs:
 
 # Common utils (rg, rga, ugrep, rga, hypefine, )
 tools_common:
-    @echo '[*]Fetching common tools..'
+    @echo '[*]Fetching utils for: {{myos}}'
 
 #JSON
 tools_json:
