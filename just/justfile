@@ -1,0 +1,10 @@
+# Load environment variables from ".env"
+set dotenv-load
+
+
+default:
+    just --list
+
+# Run all tasks
+all:
+    @echo
