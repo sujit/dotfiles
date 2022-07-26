@@ -3,8 +3,39 @@ set dotenv-load
 
 
 default:
-    just --list
+    @just --list
 
-# Run all tasks
+# Exec all
 all:
-    @echo
+    @echo '[*]Executing all tasks. This might take longer..'
+    @echo '[*]Done.'
+
+
+# Verify pre-reqs
+reqs:
+    @echo 'eget/LinOrMacElseExit/tar/unzip/unrar/curl'
+
+# Common utils (rg, rga, ugrep, rga, hypefine, )
+tools_common:
+    @echo '[*]Fetching common tools..'
+
+#JSON
+tools_json:
+    @echo '[*]Fetching JSON utils..'
+
+# Documentation
+tools_docs:
+    @echo '[*]Fetching mdbook, pandoc..'
+
+# ProjectDiscovery
+tools_infosec_projectdiscovery:
+    @echo '[*]Fetching ProjectDiscovery (projectdiscovery.io) binaries..'
+
+# InfoSec
+tools_infosec:
+    @echo 'termshark/wireshark/tcpreplay(linux)/vt/shodan/nrich/projectdiscovery'
+
+# Data science
+tools_datascience:
+    @echo 'visidata/csvtk/q_csv'
+
