@@ -11,7 +11,6 @@ myos := if os() == "macos" {
     "null"
 }
 
-
 default:
     @just --list
 
@@ -20,16 +19,15 @@ all:
     @echo '[*]Executing all tasks. This might take longer..'
     @echo '[*]Done.'
 
-
 # Verify pre-reqs
 reqs:
     @echo 'eget/LinOrMacElseExit/tar/unzip/unrar/curl'
 
 # Common utils (rg, rga, ugrep, rga, hypefine, )
 tools_common:
-    @echo '[*]Fetching utils for: {{myos}}'
+    test := if os() == "macos" { `eget -q $BINURL_MAC_RG` } else if os() == "linux" { `eget -q $BINURL_LIN_RG` } else if os() == "windows" { `eget -q $BINURL_WIN_RG` } else { @echo "null" }
 
-#JSON
+# JSON
 tools_json:
     @echo '[*]Fetching JSON utils..'
 
