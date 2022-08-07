@@ -11,6 +11,7 @@
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorStyle": "block",
     "editor.detectIndentation": true,
+    "editor.experimental.stickyScroll.enabled": true,
     "editor.fontFamily": "Iosevka,Operator Mono Lig,Sarasa NF,MonoLisaMedium NF,Sarasa NF,JuliaMono,JetBrainsMono NF,Operator Mono Lig,FiraCode NF,Operator Mono,'Courier New',monospace",
     "editor.fontLigatures": false,
     "editor.fontWeight": "500",
