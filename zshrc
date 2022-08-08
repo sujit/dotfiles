@@ -131,6 +131,8 @@ plugins=(
 	# zsh-pandoc-completion
 	extract
 	zsh-z
+	# e.g. hsi grep, shows all used commands related to "grep"
+	history
 #	pipenv
 )
 
