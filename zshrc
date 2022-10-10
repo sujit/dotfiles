@@ -236,6 +236,10 @@ function decode() {
    echo "$1" | base64 -d ; echo 
 }
 
+function offload_fix() {
+  sudo ethtool -K eth0 tx off rx off sg off tso off gro off
+}
+
 # [Sujit] Construct zsh completions
 # --------------------------------------
 # Advanced tab/command completion
