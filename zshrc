@@ -237,6 +237,11 @@ function decode() {
 }
 
 function offload_fix() {
+  # Add to start-up events
+  #   sudo vim /etc/rc.local
+  #     #!/bin/sh -e
+  #     ethtool -K eth0 tx off rx off sg off tso off gro off
+  #     exit 0
   sudo ethtool -K eth0 tx off rx off sg off tso off gro off
 }
 
