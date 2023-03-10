@@ -8,6 +8,7 @@
     nala install libssl libssl-dev
     nala install zsh
     nala install jq
+    nala install ccze
     nala install ugrep
     nala install moreutils
     nala install tmux
