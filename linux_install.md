@@ -20,6 +20,7 @@
     eget rs/curlie
     eget BurntSushi/xsv
     eget aristocratos/btop
+    eget zyedidia/micro
     eget kellyjonbrazil/jc/
     eget kellyjonbrazil/jc
     eget Peltoche/lsd
