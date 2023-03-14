@@ -50,8 +50,7 @@
     eget cantino/mcfly --to ~/.local/bin
     eget antonmedv/fx --to ~/.local/bin
     eget Svetlitski/fcp --to ~/.local/bin
-    eget kellyjonbrazil/jtbl --to ~/.local/bin
-    mv ~/.local/bin/jtbl ~/.local/bin/jtable
+    eget kellyjonbrazil/jtbl --to ~/.local/bin/jtable
     # Manipulator plugin for micro (https://github.com/NicolaiSoeborg/manipulator-plugin)
     micro -plugin install manipulator
     ```
