@@ -19,6 +19,7 @@
     eget ducaale/xh
     eget rs/curlie
     eget BurntSushi/xsv
+    eget mithrandie/csvq
     eget aristocratos/btop
     eget zyedidia/micro
     eget kellyjonbrazil/jc/
