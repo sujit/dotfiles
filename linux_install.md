@@ -52,6 +52,8 @@
     eget Svetlitski/fcp
     eget kellyjonbrazil/jtbl
     mv jtbl jtable
+    # Manipulator plugin for micro (https://github.com/NicolaiSoeborg/manipulator-plugin)
+    micro -plugin install manipulator
     ```
 
 * Install `zsh`
