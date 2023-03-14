@@ -16,42 +16,41 @@
     nala install wireshark
     updatedb
     ldconfig
-    eget ducaale/xh
-    eget rs/curlie
-    eget BurntSushi/xsv
-    eget mithrandie/csvq
-    eget aristocratos/btop
-    eget zyedidia/micro
-    eget kellyjonbrazil/jc/
-    eget kellyjonbrazil/jc
-    eget Peltoche/lsd
-    eget dandavison/delta
-    eget sharkdp/hexyl
-    eget tomnomnom/gron
-    eget PaulJuliusMartinez/jless
-    eget shenwei356/csvtk
-    eget theryangeary/choose
-    eget your-tools/ruplacer
-    eget https://github.com/tstack/lnav/releases/download/v0.11.1/lnav-0.11.1-x86_64-linux-musl.zip
-    eget junegunn/fzf
-    eget http://www.stahlworks.com/dev/sfk/sfk-linux-64.exe
-    eget ogham/dog
-    eget BurntSushi/ripgrep
-    eget phiresky/ripgrep-all
-    eget sharkdp/fd
-    eget chmln/sd
-    eget vishaltelangre/ff
-    eget sharkdp/hyperfine
-    eget gcla/termshark
-    eget bootandy/dust
-    eget solidiquis/erdtree
-    eget sharkdp/bat
-    eget svenstaro/miniserve
-    eget cantino/mcfly
-    eget antonmedv/fx
-    eget Svetlitski/fcp
-    eget kellyjonbrazil/jtbl
-    mv jtbl jtable
+    eget ducaale/xh --to ~/.local/bin
+    eget rs/curlie --to ~/.local/bin
+    eget BurntSushi/xsv --to ~/.local/bin
+    eget mithrandie/csvq --to ~/.local/bin
+    eget aristocratos/btop --to ~/.local/bin
+    eget zyedidia/micro --to ~/.local/bin
+    eget kellyjonbrazil/jc/ --to ~/.local/bin
+    eget Peltoche/lsd --to ~/.local/bin
+    eget dandavison/delta --to ~/.local/bin
+    eget sharkdp/hexyl --to ~/.local/bin
+    eget tomnomnom/gron --to ~/.local/bin
+    eget PaulJuliusMartinez/jless --to ~/.local/bin
+    eget shenwei356/csvtk --to ~/.local/bin
+    eget theryangeary/choose --to ~/.local/bin
+    eget your-tools/ruplacer --to ~/.local/bin
+    eget https://github.com/tstack/lnav/releases/download/v0.11.1/lnav-0.11.1-x86_64-linux-musl.zip --to ~/.local/bin
+    eget junegunn/fzf --to ~/.local/bin
+    eget http://www.stahlworks.com/dev/sfk/sfk-linux-64.exe --to ~/.local/bin
+    eget ogham/dog --to ~/.local/bin
+    eget BurntSushi/ripgrep --to ~/.local/bin
+    eget phiresky/ripgrep-all --to ~/.local/bin
+    eget sharkdp/fd --to ~/.local/bin
+    eget chmln/sd --to ~/.local/bin
+    eget vishaltelangre/ff --to ~/.local/bin
+    eget sharkdp/hyperfine --to ~/.local/bin
+    eget gcla/termshark --to ~/.local/bin
+    eget bootandy/dust --to ~/.local/bin
+    eget solidiquis/erdtree --to ~/.local/bin
+    eget sharkdp/bat --to ~/.local/bin
+    eget svenstaro/miniserve --to ~/.local/bin
+    eget cantino/mcfly --to ~/.local/bin
+    eget antonmedv/fx --to ~/.local/bin
+    eget Svetlitski/fcp --to ~/.local/bin
+    eget kellyjonbrazil/jtbl --to ~/.local/bin
+    mv ~/.local/bin/jtbl ~/.local/bin/jtable
     # Manipulator plugin for micro (https://github.com/NicolaiSoeborg/manipulator-plugin)
     micro -plugin install manipulator
     ```
