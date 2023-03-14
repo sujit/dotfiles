@@ -20,6 +20,7 @@
     eget rs/curlie --to ~/.local/bin
     eget BurntSushi/xsv --to ~/.local/bin
     eget mithrandie/csvq --to ~/.local/bin
+    eget harelba/q --to ~/.local/bin/q_csv
     eget aristocratos/btop --to ~/.local/bin
     eget zyedidia/micro --to ~/.local/bin
     eget kellyjonbrazil/jc/ --to ~/.local/bin
