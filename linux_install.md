@@ -26,6 +26,7 @@
     eget zyedidia/micro --to ~/.local/bin
     eget kellyjonbrazil/jc/ --to ~/.local/bin
     eget Peltoche/lsd --to ~/.local/bin
+    eget watchexec/watchexec --to ~/.local/bin
     eget dandavison/delta --to ~/.local/bin
     eget sharkdp/hexyl --to ~/.local/bin
     eget tomnomnom/gron --to ~/.local/bin
