@@ -31,6 +31,7 @@
     eget dandavison/delta --to ~/.local/bin
     eget sharkdp/hexyl --to ~/.local/bin
     eget tomnomnom/gron --to ~/.local/bin
+    eget draxil/json2nd --to ~/.local/bin
     eget PaulJuliusMartinez/jless --to ~/.local/bin
     eget shenwei356/csvtk --to ~/.local/bin
     eget theryangeary/choose --to ~/.local/bin
