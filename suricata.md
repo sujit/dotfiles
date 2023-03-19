@@ -25,6 +25,7 @@
   ## HTTP ##
   #---------------------------#
   cat eve.json | jq 'select(.event_type="http")'
+  cat eve.json | jq 'select(.event_type="http")|.http'
   ## Unique UAs
   cat eve.json | jq -s '[.[]|.http.http_user_agent]|group_by(.)|map({key:.[0],value:(.|length)})|from_entries'
 
