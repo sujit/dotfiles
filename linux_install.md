@@ -14,6 +14,7 @@
     nala install tmux
     nala install tshark
     nala install wireshark
+    dnf install skim # Fedora (https://github.com/lotabout/skim)
     updatedb
     ldconfig
     eget ducaale/xh --to ~/.local/bin
