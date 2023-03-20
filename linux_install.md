@@ -30,6 +30,7 @@
     eget kurtbuilds/checkexec --to ~/.local/bin
     eget dandavison/delta --to ~/.local/bin
     eget sharkdp/hexyl --to ~/.local/bin
+    eget Wilfred/difftastic --to ~/.local/bin
     eget tomnomnom/gron --to ~/.local/bin
     eget draxil/json2nd --to ~/.local/bin
     eget PaulJuliusMartinez/jless --to ~/.local/bin
@@ -201,3 +202,8 @@
     # Add global alias  "| fzf" automagically as a suffix
     alias -g Z='| fzf'
     ```
+
+# References
+
+* [Rust utils](https://github.com/sts10/rust-command-line-utilities)
+* [Oxidize](https://oxidizeyour.life/)
