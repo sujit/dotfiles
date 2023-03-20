@@ -46,6 +46,7 @@
     eget sharkdp/fd --to ~/.local/bin
     eget chmln/sd --to ~/.local/bin
     eget ClementTsang/bottom --to ~/.local/bin
+    eget pemistahl/grex --to ~/.local/bin
     eget getreu/stringsext --to ~/.local/bin
     eget vishaltelangre/ff --to ~/.local/bin
     eget sharkdp/hyperfine --to ~/.local/bin
