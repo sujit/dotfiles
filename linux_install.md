@@ -48,6 +48,7 @@
     eget sharkdp/hyperfine --to ~/.local/bin
     eget gcla/termshark --to ~/.local/bin
     eget bootandy/dust --to ~/.local/bin
+    eget Byron/dua-cli --to ~/.local/bin
     eget solidiquis/erdtree --to ~/.local/bin
     eget sharkdp/bat --to ~/.local/bin
     eget svenstaro/miniserve --to ~/.local/bin
