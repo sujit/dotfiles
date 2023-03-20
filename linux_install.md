@@ -52,6 +52,7 @@
     eget gcla/termshark --to ~/.local/bin
     eget bootandy/dust --to ~/.local/bin
     eget Byron/dua-cli --to ~/.local/bin
+    eget pkolaczk/fclones --to ~/.local/bin
     eget sstadick/hck --to ~/.local/bin
     eget ismaelgv/rnr --to ~/.local/bin
     eget extrawurst/gitui --to ~/.local/bin
