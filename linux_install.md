@@ -44,11 +44,15 @@
     eget phiresky/ripgrep-all --to ~/.local/bin
     eget sharkdp/fd --to ~/.local/bin
     eget chmln/sd --to ~/.local/bin
+    eget ClementTsang/bottom --to ~/.local/bin
+    eget getreu/stringsext --to ~/.local/bin
     eget vishaltelangre/ff --to ~/.local/bin
     eget sharkdp/hyperfine --to ~/.local/bin
     eget gcla/termshark --to ~/.local/bin
     eget bootandy/dust --to ~/.local/bin
     eget Byron/dua-cli --to ~/.local/bin
+    eget sstadick/hck --to ~/.local/bin
+    eget ismaelgv/rnr --to ~/.local/bin
     eget extrawurst/gitui --to ~/.local/bin
     eget solidiquis/erdtree --to ~/.local/bin
     eget sharkdp/bat --to ~/.local/bin
