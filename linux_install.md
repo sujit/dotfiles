@@ -24,6 +24,7 @@
     eget harelba/q --to ~/.local/bin/q_csv
     eget brimdata/zed --to ~/.local/bin/
     eget aristocratos/btop --to ~/.local/bin
+    eget orhun/systeroid --to ~/.local/bin
     eget zyedidia/micro --to ~/.local/bin
     eget kellyjonbrazil/jc/ --to ~/.local/bin
     eget Peltoche/lsd --to ~/.local/bin
