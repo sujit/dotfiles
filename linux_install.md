@@ -18,6 +18,7 @@
     updatedb
     ldconfig
     eget ducaale/xh --to ~/.local/bin
+    eget itchyny/gojq --to ~/.local/bin
     eget rs/curlie --to ~/.local/bin
     eget BurntSushi/xsv --to ~/.local/bin
     eget mithrandie/csvq --to ~/.local/bin
