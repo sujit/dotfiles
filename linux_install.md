@@ -26,7 +26,7 @@
     eget aristocratos/btop --to ~/.local/bin
     eget orhun/systeroid --to ~/.local/bin
     eget zyedidia/micro --to ~/.local/bin
-    eget kellyjonbrazil/jc/ --to ~/.local/bin
+    eget kellyjonbrazil/jc --to ~/.local/bin
     eget Peltoche/lsd --to ~/.local/bin
     eget watchexec/watchexec --to ~/.local/bin
     eget kurtbuilds/checkexec --to ~/.local/bin
