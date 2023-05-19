@@ -4,6 +4,7 @@
     "breadcrumbs.enabled": false,
     "diffEditor.wordWrap": "on",
     "diffEditor.diffAlgorithm":"advanced",
+    "diffEditor.renderSideBySide":true,
     "editor.autoClosingBrackets": "always",
     "editor.autoIndent": "full",
     "editor.bracketPairColorization.enabled": true,
