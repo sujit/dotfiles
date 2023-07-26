@@ -7,7 +7,7 @@ env:
 # Enable <Ctrl+Arrow> nav for each word
 # key_bindings:
 #  - { key: Right, mods: Alt, chars: "\x1BF" }
-#  - { key: Left,  mods: Alt, chars: "\x1BB" } 
+#  - { key: Left,  mods: Alt, chars: "\x1BB" }
 
 # Alacritty start-up directory
 working_directory: "C:\\users\\thesu\\"
@@ -24,7 +24,7 @@ window:
   # Startup Mode (changes require restart)
   # startup_mode: Fullscreen
   startup_mode: Windowed
-  
+
   # Window title
   title: Alacritty
 

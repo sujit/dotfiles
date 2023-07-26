@@ -55,7 +55,11 @@ set t_Co=256
 set t_ut=
 set background=dark
 " colorscheme gruvbox
-colorscheme one
+" colorscheme one
+" Miasma: Yet another cool looking theme
+" Raw: https://raw.githubusercontent.com/xero/miasma.nvim/main/colors/miasma.vim
+colorscheme miasma
+
 
 " Code highlighting
 let g:go_highlight_build_constraints = 1
