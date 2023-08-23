@@ -21,6 +21,8 @@ if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
 # [SUJIT] Add ~/.local/bin to $PATH variable
 export PATH=.:${HOME}/local/bin:${PATH}
 
+# Fix ZSH Permission error message
+ZSH_DISABLE_COMPFIX=true
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/sujit/.oh-my-zsh"
