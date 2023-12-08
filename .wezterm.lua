@@ -24,11 +24,12 @@ end
 -- }
 
 -- config.color_scheme = "Catppuccin Frappe" -- or Macchiato, Frappe, Latte
-config.color_scheme             = "Sandcastle (base16)"
+config.color_scheme             = "Darcula (base16)"
 config.font_size                = 15.0
 config.freetype_load_target     = "Normal"
 -- config.font                  = wezterm.font ("JetBrainsMono Nerd Font Mono", { weight = "Medium", italic = false })
-config.font                     = wezterm.font ("Iosevka SS04", { weight = "Medium", italic = false })
+-- config.font                  = wezterm.font ("Iosevka SS04", { weight = "Medium", italic = false })
+config.font                     = wezterm.font ("OperatorMono Nerd Font", { weight = "Medium", italic = false })
 config.audible_bell             = 'Disabled'
 config.enable_tab_bar           = true
 config.enable_scroll_bar        = true
