@@ -28,6 +28,9 @@ echo "source ~/p10k-tony-lambiris.zsh" >> ~/.zshrc
 # Alacritty
 vim ~/.config/alacritty/alacritty.yml
 
+# WezTerm (Lua-based)
+vim ~/.wezterm.lua
+
 # Zsh
 vim ~/.zshrc
 
