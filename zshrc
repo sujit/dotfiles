@@ -116,6 +116,7 @@ plugins=(
 	fzf-tab
 	gitfast
 	sudo # Auto-prefix sudo <DoubleEsc>
+	autoswitch_virtualenv
 	last-working-dir
 	zsh-completions
 	zsh-interactive-cd
