@@ -219,6 +219,16 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
 #export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
 
+## Several JSON normalizations
+jq_filter_SingleArrayToString() {
+    # tlsx command output (specific fields filtering)
+    # jq '(.version_enum) |= .[0] | (.domains) |= .[0] | (.issuer_org) |= .[0] | (.subject_org) |= .[0]'
+    # jq 'walk(if type == "array" and length == 1 then .[0] else . end)'
+    jq 'walk(if type == "array" and length == 1 then .[0] elif type == "array" then . else . end)'
+}
+
+
+
 # Compress PDF (via ghostscript)
 # Install the gs app
 #   brew install ghostscript
