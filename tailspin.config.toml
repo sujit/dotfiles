@@ -11,6 +11,6 @@ regular_expression = '(deleting index)'
 style = { fg = "red" }
 
 [[regexps]]
-regular_expression = '(updating index)'
+regular_expression = '(updating index|update_mapping)'
 style = { fg = "yellow" }
 
