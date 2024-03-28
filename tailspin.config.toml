@@ -1,16 +1,15 @@
 ####
-# Config path: ~/.config/tailspin/config.toml 
+# Config path: ~/.config/tailspin/config.toml
 ####
 
-[[regexps]]
-regular_expression = '(creating index)'
-style = { fg = "green" }
+[[keywords]]
+words = ['creating index', 'updating index', 'Successfully completed', 'Successfully started', 'Successfully started Logstash', 'JVM bootstrap flags']
+style = { fg = "green", italics = true }
+
+[[keywords]]
+words = ['Starting Logstash']
+style = { fg = "yellow", italics = false }
 
 [[regexps]]
-regular_expression = '(deleting index)'
-style = { fg = "red" }
-
-[[regexps]]
-regular_expression = '(updating index|update_mapping)'
-style = { fg = "yellow" }
-
+regular_expression = '(Logstash (shut down|stopped)|shutting down|updating index|update_mapping|Successfully deleted|failed on|No config( ?uration| files)? found)'
+style = { fg = "red", italics = true }
