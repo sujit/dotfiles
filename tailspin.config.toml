@@ -1,3 +1,7 @@
+####
+# Config path: ~/.config/tailspin/config.toml 
+####
+
 [[regexps]]
 regular_expression = '(creating index)'
 style = { fg = "green" }
