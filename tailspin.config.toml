@@ -5,6 +5,7 @@
 [date]
 number = { fg = "magenta" }
 separator = { faint = true }
+disabled = false  # Change to "True" when you don't parsing dates
 
 [date_word] # e.g. "Jan 01", "Mon Feb 28"
 day = { fg = "magenta" }
