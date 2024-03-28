@@ -9,3 +9,8 @@ style = { fg = "green" }
 [[regexps]]
 regular_expression = '(deleting index)'
 style = { fg = "red" }
+
+[[regexps]]
+regular_expression = '(updating index)'
+style = { fg = "yellow" }
+
