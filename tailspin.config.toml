@@ -1,0 +1,7 @@
+[[regexps]]
+regular_expression = '(creating index)'
+style = { fg = "green" }
+
+[[regexps]]
+regular_expression = '(deleting index)'
+style = { fg = "red" }
