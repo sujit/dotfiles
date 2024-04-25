@@ -1,0 +1,26 @@
+[plugin]
+prepend_previewers = [
+    { name = "*.md", run = "glow" },
+    { mime = "text/csv", run = "miller"},
+    # Archive previewer
+        { mime = "application/*zip",            run = "ouch" },
+        { mime = "application/x-tar",           run = "ouch" },
+        { mime = "application/x-bzip2",         run = "ouch" },
+        { mime = "application/x-7z-compressed", run = "ouch" },
+        { mime = "application/x-rar",           run = "ouch" },
+        { mime = "application/x-xz",            run = "ouch" },
+]
+
+append_previewers = [
+{ name = "*", run = "hexyl" },
+]
+
+[[manager.prepend_keymap]]
+on   = [ "f","g" ]
+run  = "plugin fg"
+desc = "find file by content"
+
+[[manager.prepend_keymap]]
+on   = [ "f","f" ]
+run  = "plugin fg --args='fzf'"
+desc = "find file by file name"
