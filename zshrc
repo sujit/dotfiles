@@ -8,87 +8,66 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# [Sujit] Setting tercolor to 256bit colors
-export DEFAULT_USER="$(whoami)"
-source=virtualenvwrapper.sh
-
-# Change TERM to screen only if terminal type is tmux
-# if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
-
-# Enable 256-bit color support (Only for TMUX env)
+# Path to your oh-my-zsh installation.
+ZSH_DISABLE_COMPFIX=true
+export ZSH="/Users/sujit/.oh-my-zsh"
 if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
 
-# [SUJIT] Add ~/.local/bin to $PATH variable
-export PATH=.:${HOME}/local/bin:${PATH}
 
-# Fix ZSH Permission error message
-ZSH_DISABLE_COMPFIX=true
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/sujit/.oh-my-zsh"
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
-
-#################################################
-# [Sujit] Custom ZSH changes goes here
+# [SUJIT]
 # ZSH_THEME="robbyrussell"
-# POWERLEVEL9K_MODE='awesome-fontconfig'
-# POWERLEVEL9K_DISABLE_RPROMPT=true
-# POWERLEVEL9K_TIME_BACKGROUND="black"
-
-
+# disabled temporarily
 ZSH_THEME="powerlevel10k/powerlevel10k"
-# Do not print the trailing % symbol in STDOUT
-PROMPT_EOL_MARK=''
-POWERLEVEL9K_MODE="nerdfont-complete"
-# POWERLEVEL9K_COLOR_SCHEME='light'
-# POWERLEVEL9K_TIME_FOREGROUND="249"
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND="clear"
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="015"
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_left"
-# POWERLEVEL9K_TIME_BACKGROUND='blue'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv time)
-DISABLE_MAGIC_FUNCTIONS="true"  # Helps to paste clipboard faster!
-# DISABLE_LS_COLORS="false"       # Disables highlighting folder colors
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+export PROMPT_EOL_MARK=''
+export POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_last"
+export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+# POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=’red’
+# Uncomment the following line to disable auto-setting terminal title.
+export DISABLE_AUTO_TITLE="true"
 
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -107,37 +86,36 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-        # https://github.com/Aloxaf/fzf-tab
-	fzf-tab
-	gitfast
-	sudo # Auto-prefix sudo <DoubleEsc>
-	autoswitch_virtualenv
-	last-working-dir
-	zsh-completions
-	zsh-interactive-cd
-	git-auto-fetch
-	zsh-autosuggestions
-	fast-syntax-highlighting
-	history-substring-search
-	virtualenv
-	encode64
-	colored-man-pages
-	copyfile
-	copypath
-	docker
-	docker-compose
-	# zsh-pandoc-completion
-	extract
-	zsh-z
-	# e.g. hsi grep, shows all used commands related to "grep"
-	history
-#	pipenv
+    git
+    # autoswitch_virtualenv
+    gitfast
+    poetry
+    macos
+    docker
+    sudo
+    macos
+    fzf-tab
+    last-working-dir
+    fzf-dir-navigator
+    fast-syntax-highlighting
+    zsh-autosuggestions
+    history-substring-search
+    virtualenv
+    encode64
+    colored-man-pages
+    copyfile
+    copypath
+    extract
+    zsh-z
+    history
 )
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -158,68 +136,118 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconf="vim ~/.zshrc"
-alias procs='sudo procs --color=always --sortd cpu '
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-prompt_context() {}
-#  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-#    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-#  fi
-#}
-
-# My custom aliases
-alias fd='fd -H ${*} '
-alias tshark='tshark --color ${*} '
-alias grep='ggrep ${*} --color=auto'
-alias zipdump='python /usr/local/bin/zipdump.py ${*}'
+# [SUJIT] Leverage the native diffing feature from kitty
+# alias diff='icdiff '
+# alias ya='yazi'
+alias difft='difft --display side-by-side-show-both'
+alias venv_where_poetry='poetry env info'
+alias venv_where_pipenv='pipenv --venv'
+alias geoiplookup2='/Users/sujit/workspace/maxmind/geoiplookup2'
+alias ntrace='ntrace -g en --ipv4 '
+alias chepy='/Users/sujit/tools/chepy/.venv/bin/chepy'
+alias magika='/Users/sujit/Library/Caches/pypoetry/virtualenvs/magika-HwT1Md0X-py3.11/bin/magika -r'
+alias pdfmerge='/Users/sujit/Library/Caches/pypoetry/virtualenvs/pdftools-P2q5f4lV-py3.11/bin/pdfmerge '
+alias klp='python3 /usr/local/bin/klp.py '
+alias tlsx='/Users/sujit/dev/projectdiscovery/tlsx -silent -sni TLSClient -dns -expired -mismatched -self-signed -revoked -so -se -so -tv -wc -ve -max-version tls12 -json -ja3 -jarm -ct all --timeout 4'
+alias katana='katana -timeout 4 -silent -jsonl'
+alias httpx='httpx -silent -j -favicon -hash md5,sha1,sha256,mmh3 -jarm -title -server -method -asn -ip -cname -timeout 4 -retries 0 '
+alias jqp='jqp -t dracula '
+alias vd='/Users/sujit/.local/share/virtualenvs/visidata-QrqPmVv0/bin/vd'
+alias speedtest2='python3 /opt/speedtest.py --simple'
+alias shodan='/Users/sujit/Library/Caches/pypoetry/virtualenvs/shodan-io-nZ-hBCmo-py3.11/bin/shodan'
+alias censys='/Users/sujit/Library/Caches/pypoetry/virtualenvs/censys-api-lyJ6ABgU-py3.11/bin/censys'
+alias termgraph='/Users/sujit/Library/Caches/pypoetry/virtualenvs/graphs-termgraph-zf9fn7KM-py3.11/bin/termgraph'
+alias greynoise='/Users/sujit/Library/Caches/pypoetry/virtualenvs/greynoise-cli-0chp3Dbh-py3.11/bin/greynoise'
+alias py='python '
+alias tlsscan='tls-scan -a --pretty --cacert="/opt/ca-bundle.crt" 2>/dev/null --concurrency=5 '
+alias tls-scan='tls-scan -a --pretty --cacert="/opt/ca-bundle.crt" 2>/dev/null --concurrency=5 '
+alias get='got -c 10 -H "User-Agent: Mozilla/5.0" '
+alias lc='lolcat '
+alias diff='delta -s '
+alias wtfis='/Users/sujit/tools/wtfis/.venv/bin/wtfis'
+# alias echo='echo -n '
+alias tree='et -y inverted'
+alias et='et -H -s size'
+alias gpl='git pull'
+alias gs='git status'
+alias ga='git add'
+# alias grep='rg '
+alias exif='exiftool'
+alias xh='xh -F -s solarized'
+alias ccze='ccze -A -o nolookups'
+alias top='btop'
+# alias zq='/System/Volumes/Data/Applications/Brim.app/Contents/Resources/app.asar.unpacked/zdeps/zq '
+# alias zed='/System/Volumes/Data/Applications/Brim.app/Contents/Resources/app.asar.unpacked/zdeps/zed '
+alias brimcap='/System/Volumes/Data/Applications/Brim.app/Contents/Resources/app.asar.unpacked/zdeps/brimcap'
+alias aria2c='aria2c -x10 --file-allocation=none'
+alias aria='aria2c -x10 --file-allocation=none'
+alias removecrlf="sd '\n' '' $1"
+alias d="kitty +kitten diff"
+alias zmv='zmv -n'
+alias grep='ug'
+# alias server='miniserve --verbose -g -u -p 80 -D -F ${*}'
+alias server='server -p 80 -t 10 -c gzip '
+alias server3='server3 -w .'
+alias jq='gojq'
+alias jd='jd -color'
+alias du='dust -r'
+# alias vim='~/nvim/bin/nvim '
+alias vim='/usr/local/bin/nvim'
+alias neovim='/usr/local/bin/nvim'
+alias nvim='/usr/local/bin/nvim'
+alias zshconfig="vim ~/.zshrc"
+# alias cat='bat --theme Catpuccin-frappe ${*}'
+alias cat='bat --theme 1337 ${*}'
+# alias sd='sd -p'
+alias curl='curlie ${*} '
+alias rm='rm -v -i ${*} '
 alias gitdiff='git diff --word-diff=color --word-diff=porcelain ${*} '
 alias tb="nc termbin.com 9999"
-alias hexdump='hexyl ${*}'
-alias pup='pup --color ${*}'
-alias sd='sd -p ${*}'
-alias cp='cp -riv ${*} '
-alias rm='rm -v -i ${*} '
-alias cat='bat --theme 1337 ${*}'
-alias cvesearch='python ~/tools/cvesearch/cvesearch.py -s ${*}'
-# alias ls='exa -lh --git -s modified '			# Exa
-alias ls='lsd -lt ' 								# LSDeluxe
-# alias server='ran -p 8080 -l=true -r=${*}'
-alias server='ran -p 8080 -l=true '
-alias mvim='mvim -v '
-alias diff='delta --dark --syntax-theme gruvbox ${*}'
-alias ssldump='/usr/local/Cellar/ssldump/0.9b3/sbin/ssldump ${*}'
-alias fixpcap_csum='for file in *.pcap; do tcprewrite -C -i "$file" -o "fix_$file"; done;'
-alias fixpcap_mac_csum='for file in *.pcap; do tcprewrite --enet-dmac=1c:f2:9a:d0:be:ef --enet-smac=8c:85:90:d0:de:ad -C -i "$file" -o "fix_mac_csum_$file"; done;'
-alias fixpcap_mac_ip_csum='for file in *.pcap; do tcprewrite --srcipmap=0.0.0.0/0:10.100.200.10 --dstipmap=0.0.0.0/0:10.100.200.20 --enet-dmac=1c:f2:9a:d0:be:ef --enet-smac=8c:85:90:d0:de:ad -C -i "$file" -o "fix_mac_ip_csum_$file"; done;'
-alias fixpcap_csum_mtu='for file in *.pcap; do tcprewrite --mtu=1500 --mtu-trunc -i "$file" -o "fix_csum_mtu_$file" -C; done;'
-alias bbcp='bbcp -P 2 -w 2M -s 10 ${*}'
-alias nano='kibi ${*}'
-alias vturl='vt url --include="**.result" ${*}'
-alias br='broot ${*}'
+alias hexyl='hexyl --character-table=ascii '
+alias hexdump='hexyl --character-table=ascii ${*}'
+alias find='fd'
+alias fd='fd -j 20 -H ${*} '
+alias vt_domain='vt --include _id,categories,last_analysis_stats,total_votes domain '
+alias vt_ip='vt --include _id,categories,last_analysis_stats,total_votes ip '
+alias mpv='open -a ~/tools/mpv/mpv.app '
+alias json2jsonl="jq -c -M '.[]' ${*}"
+alias jsonl2json="jq -s -M '.' ${*}"
 
 
-export LANGUAGE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
-#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11"
-#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
-#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
-#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
+# toolong command line log viewer
+alias tl='/Users/sujit/.local/share/virtualenvs/toolong-dagGcht0/bin/tl'
 
 
-## Several JSON normalizations
+# eza aliases
+alias ld='eza -lD'                                # List dirs only
+alias lf='eza -lF --color=always | rg -v /'       # List files only
+alias lh='eza -dl .* --group-directories-first'   # List hidden files only
+alias ll='eza -al --group-directories-first'      # List everything with directories first
+alias la='eza -al --group-directories-first'      # List everything with directories first
+# alias ls='eza -alF --color=always --sort=size | rg -v /'  # List files only sorted by size
+alias lt='eza -al --sort=modified'                # List everything sorted by time updated
+alias ls='eza -al --sort=modified'                # List everything sorted by time updated
+alias lst='eza -al --sort=modified --tree'        # Tree view
+
+
+compresspdf(){
+   # gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$1 $2
+   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$1 $2
+}
+
+# Configure tre command to access files with their indexes (e<index>)
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+
+# Custom JQ filter functions
 jq_filter_SingleArrayToString() {
     # tlsx command output (specific fields filtering)
     # jq '(.version_enum) |= .[0] | (.domains) |= .[0] | (.issuer_org) |= .[0] | (.subject_org) |= .[0]'
@@ -227,65 +255,13 @@ jq_filter_SingleArrayToString() {
     jq 'walk(if type == "array" and length == 1 then .[0] elif type == "array" then . else . end)'
 }
 
-
-
-# Compress PDF (via ghostscript)
-# Install the gs app
-#   brew install ghostscript
-# Arguments to note:
-#   $1 -> Output PDF
-#   $2 -> Input PDF
-compresspdf(){
-   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$1 $2
-}
-
-# Create directory and instantly cd to it
-function mkc () {
-    mkdir -v -p "$@" && cd "$@"
-}
-
-# Decode Base64 contents
-function decode() {
-   echo "$1" | base64 -d ; echo 
-}
-
-function offload_fix() {
-  # Add to start-up events
-  #   sudo vim /etc/rc.local
-  #     #!/bin/sh -e
-  #     ethtool -K eth0 tx off rx off sg off tso off gro off
-  #     exit 0
-  sudo ethtool -K eth0 tx off rx off sg off tso off gro off
-}
-
-# [Sujit] Construct zsh completions
-# --------------------------------------
-# Advanced tab/command completion
-autoload -U compinit
-compinit
-
-
-ctags=/usr/local/bin/ctags
-
-# broot init broot (generated via br first-run)
-source /Users/sujit/Library/Preferences/org.dystroy.broot/launcher/bash/br
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# [SUJIT] Remove duplicates from bash_history (~/.bashrc or ~/.bash_profile -> and then source)
-# --BEGIN--
-# export HISTCONTROL=ignoreboth:erasedups
-# --END--
-
-
-# [SUJIT] Remove duplicates from zsh history
-# --------------------------------------
-# --BEGIN--
-HISTFILE="$HOME/.zhistory"
+EDITOR=nvim
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
 SAVEHIST=10000000
 
+export HISTTIMEFORMAT="[%F %T] "
+HIST_STAMPS="yyyy-mm-dd"         # Add timestamps to history records
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
@@ -299,12 +275,60 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-# --END--
 
+# AWS EC2Kali
+function ssh_ec2kali () {
+    ssh -i ~/keys/sujit.key kali@ec2kali
+}
 
-# [SUJIT] FZF related stuff
-# --------------------------------------
-# --BEGIN--
+# Yazi shell wrapper
+function ya() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+# Create directory and instantly cd to it
+function mkc () {
+    mkdir -v -p "$@" && cd "$@"
+}
+
+function decode() {
+    echo "$1" | base64 -d ; echo
+}
+
+function pretty_csv {
+    cat "$@" | sed 's/,/ ,/g' | column -t -s, | less -S
+}
+
+function pretty_tsv {
+    column -t -s $'\t' -n "$@" | less -F -S -X -K
+}
+
+function ssh_tunnel_dogfoodaws() {
+    echo "[*]SSH tunneling to Dogfood AWS..."
+    ssh -L 8443:localhost:24162 sghosal@aca9704.bastions.awake.cloud
+}
+
+function ssh_pit_ubuntu (){
+    echo "[*]Connecting to Ubuntu (PIT) ec2 instance..."
+    ssh -i /Users/sujit/gitrepo/pit/PIT-dc/keys/ubuntu_18_device.pem ubuntu@ec2-34-209-136-3.us-west-2.compute.amazonaws.com
+}
+
+function ssh_pit_kali (){
+    echo "[*]Connecting to Kali (PIT) ec2 instance..."
+    ssh -i /Users/sujit/gitrepo/pit/PIT-dc/keys/kali_device.pem kali@ec2-54-185-237-223.us-west-2.compute.amazonaws.com
+}
+
+function ssh_awake_bastion () {
+    # ssh -D 9001 sghosal@bastion.in.zimbly.co
+    echo "[*]Tunneling to bastion via SSH..."
+    ssh -o ServerAliveInterval=2 -D 9001 sghosal@bastion.in.zimbly.co
+}
+
 export FZF_DEFAULT_OPTS="
 --layout=reverse
 --info=inline
@@ -323,6 +347,9 @@ export FZF_DEFAULT_OPTS="
 
 # Find hidden files as a default behavior
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'node_modules'"
+
+# Disable Cloud-Nuke telemetry
+export DISABLE_TELEMETRY=true
 
 # Add global alias  "| fzf" automagically as a suffix
 alias -g Z='| fzf'
@@ -352,39 +379,11 @@ fif() {
 }
 # --END--
 
-# [SUJIT]
-# A quick trick to prettify CSV/TSV
-function pretty_csv {
-    cat "$@" | sed 's/,/ ,/g' | column -t -s, | less -S
-}
-
-function pretty_tsv () {
-    column -t -s $'\t' -n "$@" | less -F -S -X -K
-}
-
-
-# [SUJIT] broot (br) settings
-# --------------------------------------
-# --BEGIN--
-# broot tree functionality
-function tree {
-     br -c :pt "$@"
-}
-# --END--
-
-
-# [SUJIT] Visual Bell/Beep settings
-# Turn off all beeps
-unsetopt BEEP
-# Turn off autocomplete beeps
-# unsetopt LIST_BEEP
-
-
 # Enable ls colors with sane colors
 # export LSCOLORS="Gxfxcxdxbxegedabagacad"
-export LS_COLORS="di=34;40:ln=36;40:so=35;40:pi=33;40:ex=32;40:bd=1;33;40:cd=1;33;40:su=0;41:sg=0;43:tw=0;42:ow=34;40:"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-export LSCOLORS="exgxfxdacxDaDaxbadacex"
+# export LS_COLORS="di=34;40:ln=36;40:so=35;40:pi=33;40:ex=32;40:bd=1;33;40:cd=1;33;40:su=0;41:sg=0;43:tw=0;42:ow=34;40:"
+# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# export LSCOLORS="exgxfxdacxDaDaxbadacex"
 
 # [SUJIT]
 # zstyle customizations
@@ -400,7 +399,8 @@ zstyle ':completion:*'                  group-name ''
 # activate color-completion
 zstyle ':completion:*:default'          list-colors ${(s.:.)LS_COLORS}
 # format on completion
-zstyle ':completion:*:descriptions'     format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
+# zstyle ':completion:*:descriptions'     format $'%{\e[0;31m%}completing %B%d%b%{\e[0m%}'
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
 # activate menu
 zstyle ':completion:*:history-words'    menu yes
 # ignore duplicate entries
@@ -412,10 +412,98 @@ zstyle ':completion:*'                  menu select
 zstyle ':completion:*'                  verbose true
 # Describe options in full
 zstyle ':completion:*:options'          description 'yes'
+
+# few more...
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
+zstyle ':completion:*' file-list all
+zstyle ':completion:*' verbose yes
+
+zstyle ':autocomplete:*' widget-style menu-select
+bindkey -M menuselect '\r' accept-line
+
 # --END--
 
-## [SUJIT] mcfly config
-eval "$(mcfly init zsh)"
-export MCFLY_FUZZY=2
-export MCFLY_RESULTS=30
-export MCFLY_RESULTS_SORT=LAST_RUN
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
+DISABLE_MAGIC_FUNCTIONS="true"  # Helps to paste clipboard faster!
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2 # Shorten directory length
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Initialize atuin for auto completions
+eval "$(atuin init zsh --disable-up-arrow)"
+
+# Initialize mcfly auto completions
+# eval "$(mcfly init zsh)"
+# export MCFLY_FUZZY=0
+# export MCFLY_PROMPT="❯"
+# export MCFLY_RESULTS=40
+# export MCFLY_RESULTS_SORT=LAST_RUN
+# export MCFLY_KEY_SCHEME=vim
+
+# pipenv auto-complete
+eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
+
+# ax log viewer auto-complete
+eval "$(ax --completion-script-zsh)"
+
+# Set of custom functions
+function ssh_awake_bastion {
+    echo "[*]Forwarding on TCP/9001.."
+	ssh -D 9001 sghosal@bastion.in.zimbly.co
+}
+
+source /Users/sujit/.config/broot/launcher/bash/br
+
+# Gives pretty nifty status render but looks ugly for tmux
+source ~/p10k-tony-lambiris.zsh
+
+export XMQ_BG=dark
+
+# export PATH="$HOME/.poetry/bin:$PATH"
+# export PATH="/Users/sujit/Library/Python/3.9/bin:$PATH"
+# export PATH="/Users/sujit/Library/Python/3.10/bin:$PATH"
+export PATH="/Users/sujit/.local/bin:$PATH"
+export NETWORKSAGE_API_KEY='hM2V0a0GZ2UsbvdNZzvzlHKL5XBCdtu3'
+
+
+# Starship prompt configs
+# eval "$(starship init zsh)"
+
+# Accept any SSH Host keys (Helpful during ansible automation)
+export ANSIBLE_HOST_KEY_CHECKING=False
+
+export SHODAN_API_KEY=dDsDFiPqTEZkeug7k1qrUOJrUcOl0PDH
+
+# OpenObserve Configs
+export ZO_ROOT_USER_EMAIL="root@example.com"
+export ZO_ROOT_USER_PASSWORD="Complexpass#123"
+alias openobserve='/Users/sujit/tools/openobserve/openobserve '
+autoload -U +X bashcompinit && bashcompinit
+complete -o default -C /usr/local/bin/ipinfo ipinfo
+export FOFA_EMAIL=hex.dsm@gmail.com
+export FOFA_KEY=7ef3bdf03e589cca01dd1edcebcac57c
+autoload -U +X bashcompinit && bashcompinit
+complete -o default -C /usr/local/bin/matchip matchip
+
+
+# Generated for pdtm. Do not edit.
+export PATH=$PATH:/Users/sujit/.pdtm/go/bin
+
+# ProjectDiscovery
+export PDCP_API_KEY=6a20c58f-63db-4daf-b9ec-61d63fafecac
+
+# MaxMind (mmdbctl completions)
+autoload -U +X bashcompinit && bashcompinit
+complete -o default -C /usr/local/bin/mmdbctl mmdbctl
+
+# Custom oh-my-posh configs
+# [Disabled this prompt to verify if it eats up memory resouces]
+# eval "$(oh-my-posh init zsh --config ~/.poshthemes/atomic.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/.poshthemes/montys.omp.json)"
+
