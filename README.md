@@ -23,33 +23,50 @@ echo "source ~/p10k-tony-lambiris.zsh" >> ~/.zshrc
 > **NOTE:** <br/> A quick alternative if you would want to install ZSH + Prezto using a single command
 > [git repo](https://github.com/JGroxz/presto-prezto)
 
-## Config paths
+# Config paths
 
-# Yazi (terminal file manager)
-vim ~/.config/yazi/yazi.toml         # plugins goes to "plugins" dir
+### Yazi (terminal file manager)
+
+```sh
+# plugins go to: ~/.config/yazi/plugins
+vim ~/.config/yazi/yazi.toml
+```
 > **NOTE:** Bins required (install before loading plugins):<br/>
 > ouch/rg/gf/fzf/hexyl/miller/glow
 
 
-# Alacritty
+### Alacritty
+```bash
 vim ~/.config/alacritty/alacritty.yml
+```
 
-# WezTerm (Lua-based)
+### WezTerm (Lua-based)
+```bash
 vim ~/.wezterm.lua
+```
 
-# Zsh
+### Zsh
+```sh
 vim ~/.zshrc
+```
 
-# Vim
+### Vim
+```sh
 vim ~/.vimrc
+```
 
-# NeoVim
+### NeoVim
+```sh
 vim ~/.config/nvim/init.vim
+```
 
-# tmux
+### tmux
+```sh
 vim ~/.tmux.conf
+```
 
-# kitty
+### kitty
+```sh
 cp theme-rigel.conf theme-gruvbox.conf ~/.config/kitty/ 
 vim ~/.config/kitty/kitty.conf
 ```
