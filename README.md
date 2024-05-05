@@ -26,8 +26,10 @@ echo "source ~/p10k-tony-lambiris.zsh" >> ~/.zshrc
 ## Config paths
 
 # Yazi (terminal file manager)
-# Bins required (Install before loading plugins): ouch/rg/gf/fzf/hexyl/miller/glow
 vim ~/.config/yazi/yazi.toml         # plugins goes to "plugins" dir
+> **NOTE:** Bins required (install before loading plugins):<br/>
+> ouch/rg/gf/fzf/hexyl/miller/glow
+
 
 # Alacritty
 vim ~/.config/alacritty/alacritty.yml
