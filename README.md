@@ -35,9 +35,9 @@ vim ~/.config/yazi/yazi.toml
 > ouch/rg/gf/fzf/hexyl/miller/glow
 
 
-### Alacritty
+### Alacritty (YML usage is deprecated)
 ```bash
-vim ~/.config/alacritty/alacritty.yml
+vim ~/.config/alacritty/alacritty.toml
 ```
 
 ### WezTerm (Lua-based)
