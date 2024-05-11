@@ -1,5 +1,7 @@
 {
-    "editor.fontFamily": "MonoLisaNerdFontCompleteM-Regular,VictorMonoNerdFontCompleteM-Medium,JetBrainsMonoNerdFontCompleteM-Regular,OperatorMonoNerdFontComplete-Medium,ComicCode Nerd Font,Iosevka Term SS04,OperatorMonoSSm Nerd Font,M PLUS Code Latin,Iosevka Medium Nerd Font Complete Mono,Iosevka Nerd Font Mono,CamingoCode Nerd Font,OperatorMonoSSm Nerd Font,Recursive Code iCursive Cg,Hack,Sarasa NF,MonoLisaRegular NF,agave Nerd Font Mono,Sarasa NF,Fira Code Retina,Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "editor.fontLigatures": "'calt', 'ss01', 'cv06', 'cv07'",
+    // "editor.fontFamily": "MonoLisaNerdFontCompleteM-Regular,VictorMonoNerdFontCompleteM-Medium,JetBrainsMonoNerdFontCompleteM-Regular,OperatorMonoNerdFontComplete-Medium,ComicCode Nerd Font,Iosevka Term SS04,OperatorMonoSSm Nerd Font,M PLUS Code Latin,Iosevka Medium Nerd Font Complete Mono,Iosevka Nerd Font Mono,CamingoCode Nerd Font,OperatorMonoSSm Nerd Font,Recursive Code iCursive Cg,Hack,Sarasa NF,MonoLisaRegular NF,agave Nerd Font Mono,Sarasa NF,Fira Code Retina,Menlo, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "diffEditor.wordWrap": "on",
