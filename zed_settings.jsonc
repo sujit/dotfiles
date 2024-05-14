@@ -9,6 +9,7 @@
   "hover_popover_enabled": true,
   "tab_size": 4,
   "preferred_line_length": 79,
+  "show_wrap_guides": true,
   // "soft_wrap": "preferred_line_length",
   "remove_trailing_whitespace_on_save": true,
   "show_completions_on_input": true,
