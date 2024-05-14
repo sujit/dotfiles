@@ -1,0 +1,62 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": "Gruvbox Light Hard",
+  "auto_update": true,
+  "git_diff": true,
+  "search_results": true,
+  "enable_language_server": true,
+  "use_autoclose": true,
+  "hard_tabs": false,
+  "hover_popover_enabled": true,
+  "tab_size": 4,
+  // "preferred_line_length": 76,
+  // "soft_wrap": "preferred_line_length",
+  "remove_trailing_whitespace_on_save": true,
+  "show_completions_on_input": true,
+  "show_completion_documentation": true,
+  "format_on_save": "off",
+  "ensure_final_newline_on_save": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "buffer_font_size": 13,
+  "font_size": 13,
+  "ui_font_family": "RecMonoCasual Nerd Font Mono",
+  "buffer_font_family": "RecMonoCasual Nerd Font Mono",
+  "buffer_line_height": "comfortable",
+  "ui_font_features": {
+    // Disable ligatures:
+    "calt": true
+  },
+  "multi_cursor_modifier": "alt",
+  "restore_on_startup":"last_workspace",
+  "working_directory": "current_project_directory",
+  "private_files": [
+    "**/.env*",
+    "**/*.pem",
+    "**/*.key",
+    "**/*.cert",
+    "**/*.crt",
+    "**/secrets.yml"
+  ],
+  "detect_venv": {
+    "on": {
+      // Default directories to search for virtual environments, relative
+      // to the current working directory. We recommend overriding this
+      // in your project's settings, rather than globally.
+      "directories": [".env", "env", ".venv", "venv"],
+      // Can also be 'csh', 'fish', and `nushell`
+      "activate_script": "default"
+    }
+  },
+  "show_whitespaces": "selection",
+  "line_height": "comfortable"
+}
