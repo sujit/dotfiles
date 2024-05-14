@@ -8,24 +8,24 @@
   "hard_tabs": false,
   "hover_popover_enabled": true,
   "tab_size": 4,
-  // "preferred_line_length": 76,
+  "preferred_line_length": 79,
   // "soft_wrap": "preferred_line_length",
   "remove_trailing_whitespace_on_save": true,
   "show_completions_on_input": true,
   "show_completion_documentation": true,
   "format_on_save": "off",
   "ensure_final_newline_on_save": true,
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "buffer_font_size": 13,
   "font_size": 13,
   "ui_font_family": "RecMonoCasual Nerd Font Mono",
+  "buffer_font_size": 13,
   "buffer_font_family": "RecMonoCasual Nerd Font Mono",
   "buffer_line_height": "comfortable",
+  "buffer_font_features": {
+      // Setting it to false turns off ligatures
+    "calt": true
+  },
   "ui_font_features": {
-    // Disable ligatures:
+    // Enable ligatures
     "calt": true
   },
   "multi_cursor_modifier": "alt",
@@ -50,5 +50,9 @@
     }
   },
   "show_whitespaces": "selection",
-  "line_height": "comfortable"
+  "line_height": "comfortable",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
 }
