@@ -174,7 +174,10 @@ alias lc='lolcat '
 alias diff='delta -s '
 alias wtfis='/Users/sujit/tools/wtfis/.venv/bin/wtfis'
 # alias echo='echo -n '
-alias tree='et -y inverted'
+# alias tree='et -y inverted'
+alias tree=tre
+alias fake='/Users/sujit/tools/fake_data_generator/bin/fake'   # Generate fake data
+alias faker='/Users/sujit/tools/fake_data_generator/bin/faker' # Yet another better substitute
 alias et='et -H -s size'
 alias gpl='git pull'
 alias gs='git status'
@@ -190,13 +193,15 @@ alias brimcap='/System/Volumes/Data/Applications/Brim.app/Contents/Resources/app
 alias aria2c='aria2c -x10 --file-allocation=none'
 alias aria='aria2c -x10 --file-allocation=none'
 alias removecrlf="sd '\n' '' $1"
-alias d="kitty +kitten diff"
+alias d="kitten diff"
 alias zmv='zmv -n'
 alias grep='ug'
-# alias server='miniserve --verbose -g -u -p 80 -D -F ${*}'
-alias server='server -p 80 -t 10 -c gzip '
+alias server='miniserve --verbose -g -u -p 80 -D -F -O desc ${*}'
+# alias server='server -p 80 -t 10 -c gzip '
 alias server3='server3 -w .'
-alias jq='gojq'
+# alias jq='gojq'
+alias jq='jaq'  # jaq is much faster than gojq
+alias st='stew'
 alias jd='jd -color'
 alias du='dust -r'
 # alias vim='~/nvim/bin/nvim '
@@ -205,11 +210,11 @@ alias neovim='/usr/local/bin/nvim'
 alias nvim='/usr/local/bin/nvim'
 alias zshconfig="vim ~/.zshrc"
 # alias cat='bat --theme Catpuccin-frappe ${*}'
-alias cat='bat --theme 1337 ${*}'
+alias cat='bat --theme DarkNeon ${*}'
 # alias sd='sd -p'
 alias curl='curlie ${*} '
 alias rm='rm -v -i ${*} '
-alias gitdiff='git diff --word-diff=color --word-diff=porcelain ${*} '
+alias gitdiff='git difftool --no-symlinks --dir-diff'
 alias tb="nc termbin.com 9999"
 alias hexyl='hexyl --character-table=ascii '
 alias hexdump='hexyl --character-table=ascii ${*}'
@@ -220,6 +225,7 @@ alias vt_ip='vt --include _id,categories,last_analysis_stats,total_votes ip '
 alias mpv='open -a ~/tools/mpv/mpv.app '
 alias json2jsonl="jq -c -M '.[]' ${*}"
 alias jsonl2json="jq -s -M '.' ${*}"
+alias hg='kitten hyperlinked_grep'
 
 
 # toolong command line log viewer
@@ -234,7 +240,7 @@ alias ll='eza -al --group-directories-first'      # List everything with directo
 alias la='eza -al --group-directories-first'      # List everything with directories first
 # alias ls='eza -alF --color=always --sort=size | rg -v /'  # List files only sorted by size
 alias lt='eza -al --sort=modified'                # List everything sorted by time updated
-alias ls='eza -al --sort=modified'                # List everything sorted by time updated
+alias ls='eza --hyperlink -al --sort=modified'                # List everything sorted by time updated
 alias lst='eza -al --sort=modified --tree'        # Tree view
 
 
@@ -461,6 +467,7 @@ function ssh_awake_bastion {
 source /Users/sujit/.config/broot/launcher/bash/br
 
 # Gives pretty nifty status render but looks ugly for tmux
+# disabled termporarily
 source ~/p10k-tony-lambiris.zsh
 
 export XMQ_BG=dark
@@ -484,11 +491,9 @@ export SHODAN_API_KEY=dDsDFiPqTEZkeug7k1qrUOJrUcOl0PDH
 export ZO_ROOT_USER_EMAIL="root@example.com"
 export ZO_ROOT_USER_PASSWORD="Complexpass#123"
 alias openobserve='/Users/sujit/tools/openobserve/openobserve '
-autoload -U +X bashcompinit && bashcompinit
 complete -o default -C /usr/local/bin/ipinfo ipinfo
 export FOFA_EMAIL=hex.dsm@gmail.com
 export FOFA_KEY=7ef3bdf03e589cca01dd1edcebcac57c
-autoload -U +X bashcompinit && bashcompinit
 complete -o default -C /usr/local/bin/matchip matchip
 
 
@@ -506,4 +511,4 @@ complete -o default -C /usr/local/bin/mmdbctl mmdbctl
 # [Disabled this prompt to verify if it eats up memory resouces]
 # eval "$(oh-my-posh init zsh --config ~/.poshthemes/atomic.omp.json)"
 # eval "$(oh-my-posh init zsh --config ~/.poshthemes/montys.omp.json)"
-
+# eval "$(starship init zsh)"
