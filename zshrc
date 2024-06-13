@@ -335,21 +335,21 @@ function ssh_awake_bastion () {
     ssh -o ServerAliveInterval=2 -D 9001 sghosal@bastion.in.zimbly.co
 }
 
-export FZF_DEFAULT_OPTS="
---layout=reverse
---info=inline
---height=80%
---multi
---preview-window=:hidden
---preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
---color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
---prompt='∼ ' --pointer='▶' --marker='✓'
---bind '?:toggle-preview'
---bind 'ctrl-a:select-all'
---bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
---bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
---bind 'ctrl-v:execute(code {+})'
-"
+# export FZF_DEFAULT_OPTS="
+# --layout=reverse
+# --info=inline
+# --height=80%
+# --multi
+# --preview-window=:hidden
+# --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+# --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
+# --prompt='∼ ' --pointer='▶' --marker='✓'
+# --bind '?:toggle-preview'
+# --bind 'ctrl-a:select-all'
+# --bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
+# --bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
+# --bind 'ctrl-v:execute(code {+})'
+# "
 
 # Find hidden files as a default behavior
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'node_modules'"
@@ -361,29 +361,48 @@ export DISABLE_TELEMETRY=true
 alias -g Z='| fzf'
 
 # rga (ripgrep-all) with fzf functionality
-rga_fzf() {
-	RG_PREFIX="rga --files-with-matches"
-	local file
-	file="$(
-		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
-				--phony -q "$1" \
-				--bind "change:reload:$RG_PREFIX {q}" \
-				--preview-window="70%:wrap"
-	)" &&
-	echo "opening $file" &&
-	xdg-open "$file"
-}
+# rga_fzf() {
+# 	RG_PREFIX="rga --files-with-matches"
+# 	local file
+# 	file="$(
+# 		FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
+# 			fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
+# 				--phony -q "$1" \
+# 				--bind "change:reload:$RG_PREFIX {q}" \
+# 				--preview-window="70%:wrap"
+# 	)" &&
+# 	echo "opening $file" &&
+# 	xdg-open "$file"
+# }
 
 # find-in-files (fif <search_string>)
-fif() {
-    if [ ! "$#" -gt 0 ]; then
-        echo "Need a string to search for!";
-        return 1;
-    fi
-    rg --files-with-matches --no-messages "$1" | fzf $FZF_PREVIEW_WINDOW --preview "rg --ignore-case --pretty --context 10 '$1' {}"
-}
-# --END--
+# fif() {
+#     if [ ! "$#" -gt 0 ]; then
+#         echo "Need a string to search for!";
+#         return 1;
+#     fi
+#     rg --files-with-matches --no-messages "$1" | fzf $FZF_PREVIEW_WINDOW --preview "rg --ignore-case --pretty --context 10 '$1' {}"
+# }
+
+# ripgrep -> fzf -> vim [QUERY]
+fif() (
+  RELOAD='reload:rg --column --color=always --smart-case {q} || :'
+  OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
+            nvim {1} +{2}     # No selection. Open the current line in Vim.
+          else
+            nvim +cw -q {+f}  # Build quickfix list for the selected items.
+          fi'
+  fzf < /dev/null \
+      --disabled --ansi --multi \
+      --bind "start:$RELOAD" --bind "change:$RELOAD" \
+      --bind "enter:become:$OPENER" \
+      --bind "ctrl-o:execute:$OPENER" \
+      --bind 'alt-a:select-all,alt-d:deselect-all,ctrl-/:toggle-preview' \
+      --delimiter : \
+      --preview 'bat --style=full --color=always --highlight-line {2} {1}' \
+      --preview-window '~4,+{2}+4/3,<80(up)' \
+      --query "$*"
+)
 
 # Enable ls colors with sane colors
 # export LSCOLORS="Gxfxcxdxbxegedabagacad"
